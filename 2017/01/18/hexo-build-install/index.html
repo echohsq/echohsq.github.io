@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装篇:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#部署篇"><span class="post-toc-number">2.</span> <span class="post-toc-text">部署篇:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#填坑篇"><span class="post-toc-number">3.</span> <span class="post-toc-text">填坑篇:</span></a></li></ol>
+        
 
         <!--
         <li class="mdl-menu__item">
@@ -384,9 +384,31 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="安装篇"><a href="#安装篇" class="headerlink" title="安装篇:"></a>安装篇:</h1><p>  明天写</p>
-<h1 id="部署篇"><a href="#部署篇" class="headerlink" title="部署篇:"></a>部署篇:</h1><p> 后天写</p>
-<h1 id="填坑篇"><a href="#填坑篇" class="headerlink" title="填坑篇:"></a>填坑篇:</h1><p> 想起来再写</p>
+        <p><strong>之前的有学生优惠的腾讯云被我架设了一个WordPress,还没玩爽,因为没有备案而偃旗息鼓了,只好转战我大hexo了</strong><br><a id="more"></a></p>
+<p>#安装篇:</p>
+<p>###环境配置:<br> 1.<a href="https://nodejs.org/zh-cn/" target="_blank" rel="external"><strong>node js</strong></a>(点击下载,建议LTS版本)<br> 2.<a href="https://git-scm.com/downloads" target="_blank" rel="external"><strong>git</strong></a><br> 3.<a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external"><strong>Cmd MarkDown</strong></a><br> 依次下载后就可以安装啦,如果你看过其他的博客的话,不用配置环境,按照软件的默认设置安装就好,唯一需要注意的是,node js和git软件的安装一定要记得把path项勾上(当然path原本是勾选的),不需要什么特别配置,一路next就好啦.<br> 当node js和git安装好后,我们要先检查一下,是否可以调用,用win+r打开运行,输入cmd,通过两个命令来检查一下是否安装就位:</p>
+<blockquote>
+<p>node -v<br>git –version</p>
+</blockquote>
+<p> 如果显示:<br><img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/33971846-file_1484810705658_10d4f.png" alt=""><br><strong>恭喜你</strong>,第一步成功了!</p>
+<p>###hexo的安装:<br>1.利用npm安装:<br><code>npm install hexo-cli -g</code><br>稍等片刻,我们的hexo便会安装成功了.<br>2.还记得我们的git么?<br>  现在就是git出马的时候了,如果你还不知道的git版本控制,那么请先花10分钟阅读一下维基百科上关于git和github以及之后我们要部署的github pages的相关内容.<br>  看完了?对么,那么让我们开始吧,如果没有记错的话,这时你的右键菜单中一定会多出两个这种东西<br>  <img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/63269076-file_1484811680435_103d5.png" alt=""></p>
+<blockquote>
+<p>Git GUI here和Git Bash here</p>
+</blockquote>
+<p>  这就是我们需要的,GUI是图形窗口,图形窗口谁不会啊,所以我们选择打开bash,依次输入:<code>cd d:/</code><br>  <code>mkdir hexo &amp;&amp; cd hexo</code><br> <img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/91348084-file_1484812335278_a45a.png" alt=""><br> 然后执行:<br> <code>hexo init</code> 初始化hexo仓库<br> 安装依赖包:<br> <code>npm install</code><br> 这时我们的hexo博客便已经搭建完成了.<br> 执行<code>hexo g</code> 生成静态html的代码<br> 再在bash中执行<code>hexo s --debug</code>就可在浏览器中输入<a href="http://localhost:4000来访问自己的博客啦!" target="_blank" rel="external">http://localhost:4000来访问自己的博客啦!</a></p>
+<p>#部署篇:<br> 关于github的账号注册以及创建repository问题,可参阅<a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="external">这里</a>.本篇不再累述.<br> 假设仓库已经准备好了,建议仓库地址使用ssh.具体可参阅stormZhang的公众号.<br> 这时打开hexo目录下的<code>_config.yml</code>文件(使用sublime)滑到文件最底端,按照我的模板填写:</p>
+<blockquote>
+<p>deploy:<br>    type: git(注意,冒号之后有一个空格)<br>    repo: 复制的仓库链接<br>    branch: master</p>
+</blockquote>
+<p>这时进入bash中,执行:<br><code>npm install hexo-deployer-git --save</code>(防止出现不能识别git的错误)<br><code>hexo g</code><br><code>hexo d</code><br>这时浏览器中输入username.github.io即可访问你的博客了;可能你会觉的他的默认主题很丑,这是我们就需要在主题上花一番功夫了,<a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="external">这里</a>写的很好.</p>
+<p>#填坑篇:</p>
+<ul>
+<li>github的repository和theme部分我没有写,只是需要注意的是安装完hexo后的操作,全部需要在git bash中进行,千万不要在cmd中输入命令.</li>
+<li>CNAME问题:<br>当你有自己的域名时可以选择绑定到自己的域名,在你自己注册域名的地方设置两条CNAME跳转,分别是@匹配和www匹配,地址输入<code>username.github.io</code>,然后在hexo文件夹下的public文件夹下新建一个名为CNAME(注意大小写,没有后缀名),输入你自己的域名就好了.</li>
+</ul>
+<ul>
+<li>public文件夹不更行问题,这个问题可能比较小众,一般都是由于你的主题配置文件<code>_config.yml</code>更改的格式不对,这时我们需要在<code>hexo g</code>时,注意输出的提示,观察哪里出现了问题,一般都是主题的插件没有安装,而开启了相应功能  </li>
+</ul>
 
     
 

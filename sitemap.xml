@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://echohsq.github.io/2017/02/04/python-web-crawling/</loc>
+    
+    <lastmod>2017-02-04T03:24:36.682Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://echohsq.github.io/2017/01/18/hexo-build-install/</loc>
     
     <lastmod>2017-01-19T08:38:41.429Z</lastmod>

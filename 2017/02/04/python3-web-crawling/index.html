@@ -10,7 +10,7 @@
     
     <title>
         
-            hexo的部署与安装 | 
+            python3成果与笔记 | 
         
         EchoHao
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://echohsq.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="hexo的部署与安装 | EchoHao">
+    <meta property="og:title" content="python3成果与笔记 | EchoHao">
     <meta property="og:description" content="developer">
 
     <!--[if lte IE 9]>
@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装篇:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境配置"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">环境配置:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo的安装"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">hexo的安装:</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#部署篇"><span class="post-toc-number">2.</span> <span class="post-toc-text">部署篇:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#填坑篇"><span class="post-toc-number">3.</span> <span class="post-toc-text">填坑篇:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#后续使用篇"><span class="post-toc-number">4.</span> <span class="post-toc-text">后续使用篇:</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#python实战之爬取豆瓣一拍上的摄影图片"><span class="post-toc-number">1.</span> <span class="post-toc-text">python实战之爬取豆瓣一拍上的摄影图片</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#熟悉工具"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">熟悉工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-BeautifulSoup"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.BeautifulSoup</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-requests"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">2.requests</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在Python3的基础上开始工作"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">在Python3的基础上开始工作</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -251,10 +251,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://picc.tangjianpeng.com/hexo1-1.png)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-2-4/97107324-file_1486176408022_fffa.jpg)">
     
             <p class="article-headline-p">
-                hexo的部署与安装
+                python3成果与笔记
             </p>
         </div>
 
@@ -273,7 +273,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Echo Hao</strong>
-        <span>1月 18, 2017</span>
+        <span>2月 04, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -294,7 +294,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC4UlEQVR42u3aQW7jQAwEQP//09lrgMRON0ebyDOl00IwpCkFWIJsPj6OvB7Y2NjY2NjY2NjYt2Q/4uvr7/MnPHvjszuf738DKM+MjY2NfQL7h//6vxzx2etfw5IntOfJf4ONjY19Avs1oy1gT18ff478zxC9FxsbGxu7LRhxSzNrfrCxsbGxrypg+W9evyVvObCxsbGxLxjQxEP5tp1o2b80S8PGxsa+PbttDO7w7z/It7GxsbFvyZ5ds5CgbXXychidGRsbG3tTdttmtFFuOxJqF3ryT4aNjY29KzsvUe3oP1nEaWOGpVEUNjY29tbstj3IB/TtUk6+stOGxNjY2Ni7slcag7zxmBWethAOOzBsbGzs7dj5yk4+nMqf35bG4jzY2NjYW7NnrcUMeVUwUJ8fGxsbe1P2LCRox0btMGg2YLps+RIbGxv7rdgroezsY62XqOFyDzY2Nvam7GQVpi0q+YfISfnT6nwbGxsbeyN2PlpqI9v8mXmoXIcK2NjY2Aew25LWlqhZGWvvD+s2NjY29puz20FSvnyTHDp/ztJSETY2Nvam7LbkJKUoD4PzxqONdX9oRbCxsbG3Y+cD93ZBZ9aQ5AOjPKjAxsbG3pXdrsjkQe962LBe6rCxsbFPY88w+erMbDy0XkqxsbGx92bPGoP89+vDprrleHYGbGxs7K3ZH/E1fOVFKzvtebCxsbHPYa9HsEnJWRlg5fi6bmNjY2NvwV6JfnN8fufa+9jY2NjnsPNBUh4AJI1H267kFzY2NvYJ7PbKR/ZXtTSzALjIt7GxsbHfnN0Wg9ny5cqyzsq4ChsbG/sc9krRmhWePDZoP9ZlKzvY2NjYb8ieLUHmAe1V8W276ImNjY2NnTcVsyFRuyo0K5zY2NjY2Hko+7oUtfgWjI2NjX0yux395GOgtvFog+elTSVsbGzsLdj/I+i9KkLIP+st8m1sbGzsX2efc2FjY2NjY2NjY2Pf5voH3bCa3X0OxA4AAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC20lEQVR42u3aQXKDMAwF0Nz/0ukBMnG/JDoF+7HKBAp+ZKHqy6/3kccLGxsbGxsbGxsb+5bsV3ysr/88+/mUX5b1cZ/12XzN2NjY2Cew5wtav4jq3ybsfM3Y2NjY57CTpY8e/IW0vqZazLCxsbGxkyI0WVwCXl+PjY2NjT2/RV5y8kCqeg02NjY29rypWD94jclfYrKeP8/SsLGxsW/Prg567/D5H+bb2NjY2LdkV49ek5CUqKQsjVaOjY2NvSl7vdBeAJQ0JNUXMR9FYGNjY+/KzktIb/iaMHoFrLolCBsbG3tX9jo8ykOlfCnV6Cr/ScqtCDY2NvYW7N5QNmlg1gvKR8LVgQE2Njb2meykeCQLmmy7vGrwXAiVsLGxsbdglze+BMWpCuhtx8l/AGxsbOxz2Hmxyb+fv7h8SFBoRbCxsbE3Yuf/0OchThLxTJB5icXGxsY+gV3dyFhtG6qFKn9leZyEjY2NvTd7UnKqd0gamOrPUChs2NjY2Juy8w0xkxCqumUn+SZZCTY2NvYJ7KSp6JWoavSTR1R5s4SNjY19GjsvEvOAqTdOro4osLGxsU9mV5uEKjI/2xswNAsYNjY29gPZefieF63eppyrtvhgY2Njn8bOo5lJsal+Mx8JNOfb2NjY2A9kV+OeSSQ04V0QM2FjY2Nvyk4enxe8ajsxHznkK8HGxsY+gZ1vr0leRPXsVdePdiphY2NjP5DdW2hShJI7RwPaHjIPlbCxsbEfzk4KUi9UmgyGJ9s6v4qwsbGxD2PnLUcyds2Hu9V2qDBsxsbGxt6UfVX4Xm02qk1I/jkaD2BjY2Nvx+4NYpMop/oi5qOCUZaGjY2N/XB2HtZUy0lv8DCJlrCxsbGxe21AlZcPD8pIbGxsbOy4LOXf5OUqHyo3B73Y2NjYm7InUVEv9J+HU9jY2NjYvUFvdSg72b4zCZuwsbGxT2Cfc2BjY2NjY2NjY2Pf5vgBWL7Yu0SL7UMAAAAASUVORK5CYII=">
         </ul>
     
 
@@ -306,7 +306,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/程序安装/">程序安装</a>
+        <a class="post_tag-link" href="/tags/编写脚本/">编写脚本</a>
     </ul>
     
 
@@ -333,7 +333,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=hexo的部署与安装&url=https://echohsq.github.io//2017/01/18/hexo-build-install/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=python3成果与笔记&url=https://echohsq.github.io//2017/02/04/python3-web-crawling/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -345,7 +345,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/01/18/hexo-build-install/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/02/04/python3-web-crawling/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -354,7 +354,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/01/18/hexo-build-install/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/02/04/python3-web-crawling/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -366,7 +366,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=hexo的部署与安装&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/01/18/hexo-build-install/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=python3成果与笔记&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/02/04/python3-web-crawling/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -384,30 +384,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p><strong>之前的有学生优惠的腾讯云被我架设了一个WordPress,还没玩爽,因为没有备案而偃旗息鼓了,只好转战我大hexo了</strong><br><a id="more"></a></p>
-<h1 id="安装篇"><a href="#安装篇" class="headerlink" title="安装篇:"></a>安装篇:</h1><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置:"></a>环境配置:</h3><p> 1.<a href="https://nodejs.org/zh-cn/" target="_blank" rel="external"><strong>node js</strong></a>(点击下载,建议LTS版本)<br> 2.<a href="https://git-scm.com/downloads" target="_blank" rel="external"><strong>git</strong></a><br> 3.<a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external"><strong>Cmd MarkDown</strong></a><br> 依次下载后就可以安装啦,如果你看过其他的博客的话,不用配置环境,按照软件的默认设置安装就好,唯一需要注意的是,node js和git软件的安装一定要记得把path项勾上(当然path原本是勾选的),不需要什么特别配置,一路next就好啦.<br> 当node js和git安装好后,我们要先检查一下,是否可以调用,用win+r打开运行,输入cmd,通过两个命令来检查一下是否安装就位:</p>
-<blockquote>
-<p>node -v<br>git –version</p>
-</blockquote>
-<p> 如果显示:<br><img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/33971846-file_1484810705658_10d4f.png" alt=""><br><strong>恭喜你</strong>,第一步成功了!</p>
-<h3 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装:"></a>hexo的安装:</h3><p>1.利用npm安装:<br><code>npm install hexo-cli -g</code><br>稍等片刻,我们的hexo便会安装成功了.<br>2.还记得我们的git么?<br>  现在就是git出马的时候了,如果你还不知道的git版本控制,那么请先花10分钟阅读一下维基百科上关于git和github以及之后我们要部署的github pages的相关内容.<br>  看完了?对么,那么让我们开始吧,如果没有记错的话,这时你的右键菜单中一定会多出两个这种东西<br>  <img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/63269076-file_1484811680435_103d5.png" alt=""></p>
-<blockquote>
-<p>Git GUI here和Git Bash here</p>
-</blockquote>
-<p>  这就是我们需要的,GUI是图形窗口,图形窗口谁不会啊,所以我们选择打开bash,依次输入:<code>cd d:/</code><br>  <code>mkdir hexo &amp;&amp; cd hexo</code><br> <img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/91348084-file_1484812335278_a45a.png" alt=""><br> 然后执行:<br> <code>hexo init</code> 初始化hexo仓库<br> 安装依赖包:<br> <code>npm install</code><br> 这时我们的hexo博客便已经搭建完成了.<br> 执行<code>hexo g</code> 生成静态html的代码<br> 再在bash中执行<code>hexo s --debug</code>就可在浏览器中输入<a href="http://localhost:4000来访问自己的博客啦!" target="_blank" rel="external">http://localhost:4000来访问自己的博客啦!</a></p>
-<h1 id="部署篇"><a href="#部署篇" class="headerlink" title="部署篇:"></a>部署篇:</h1><p> 关于github的账号注册以及创建repository问题,可参阅<a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="external">这里</a>.本篇不再累述.<br> 假设仓库已经准备好了,建议仓库地址使用ssh.具体可参阅stormZhang的公众号.<br> 这时打开hexo目录下的<code>_config.yml</code>文件(使用sublime)滑到文件最底端,按照我的模板填写:</p>
-<blockquote>
-<p>deploy:<br>    type: git(注意,冒号之后有一个空格)<br>    repo: 复制的仓库链接<br>    branch: master</p>
-</blockquote>
-<p>这时进入bash中,执行:<br><code>npm install hexo-deployer-git --save</code>(防止出现不能识别git的错误)<br><code>hexo g</code><br><code>hexo d</code><br>这时浏览器中输入username.github.io即可访问你的博客了;可能你会觉的他的默认主题很丑,这是我们就需要在主题上花一番功夫了,<a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="external">这里</a>写的很好.</p>
-<h1 id="填坑篇"><a href="#填坑篇" class="headerlink" title="填坑篇:"></a>填坑篇:</h1><ul>
-<li>github的repository和theme部分我没有写,只是需要注意的是安装完hexo后的操作,全部需要在git bash中进行,千万不要在cmd中输入命令.</li>
-<li>CNAME问题:<br>当你有自己的域名时可以选择绑定到自己的域名,在你自己注册域名的地方设置两条CNAME跳转,分别是@匹配和www匹配,地址输入<code>username.github.io</code>,然后在hexo文件夹下的public文件夹下新建一个名为CNAME(注意大小写,没有后缀名),输入你自己的域名就好了.</li>
-</ul>
-<ul>
-<li>public文件夹不更行问题,这个问题可能比较小众,一般都是由于你的主题配置文件<code>_config.yml</code>更改的格式不对,这时我们需要在<code>hexo g</code>时,注意输出的提示,观察哪里出现了问题,一般都是主题的插件没有安装,而开启了相应功能  <h1 id="后续使用篇"><a href="#后续使用篇" class="headerlink" title="后续使用篇:"></a>后续使用篇:</h1>/c/Users/h/AppData/Roaming/npm/hexo: line 12: node: command not found<br>(更新于2017-02-04)<br>在我配置好java的环境变量后,Git bash敲下命令hexo g，居然出现上述错误信息，然后发现输入任何有关hexo的命令都是同样的错误，我又试着敲了npm这个命令，发现也是出错的，于是我想估计是环境变量设置有问题，我在用户的环境变量PATH中添加了两个路径，分别是C:\Users\h\node_modules\hexo\bin和C:\software\nodejs，再加上原来就添加的路径C:\Users\h\AppData\Roaming\npm，发现就解决这个问题了，可以正常修改博文，然后发布网站。</li>
-</ul>
-<p>不过，我也不清楚是否完全解决这个问题，还需要观察一段时间。</p>
+        <h1 id="python实战之爬取豆瓣一拍上的摄影图片"><a href="#python实战之爬取豆瓣一拍上的摄影图片" class="headerlink" title="python实战之爬取豆瓣一拍上的摄影图片"></a>python实战之爬取豆瓣一拍上的摄影图片</h1><p>在学校的时候就断断续续的学习Python3的基础知识,但是总想找一个实际项目练一练手,所以我选择了爬虫,好玩,好用,基础知识差不多也都用得上.<br><a id="more"></a></p>
+<h2 id="熟悉工具"><a href="#熟悉工具" class="headerlink" title="熟悉工具"></a>熟悉工具</h2><p><em>俗话说的好,工欲善其事必先利其器</em><br>写一个爬虫需要一些帮助我们的工具,我们需要使用pip安装一下我们需要的第三方库</p>
+<h3 id="1-BeautifulSoup"><a href="#1-BeautifulSoup" class="headerlink" title="1.BeautifulSoup"></a>1.<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="external">BeautifulSoup</a></h3><p>BeautifulSoup是一个html的解析器,他可以查找html标签中的内容,使用极其方便.<br>主要使用BeautifulSoup中的findAll方法将我们需要的html中包裹的图片链接提取出来.</p>
+<h3 id="2-requests"><a href="#2-requests" class="headerlink" title="2.requests"></a>2.<a href="http://docs.python-requests.org/zh_CN/latest/" target="_blank" rel="external">requests</a></h3><p>requests是Python的一个http的第三方库,它可以为我们实现<code>get</code>,<code>put</code>,<code>post</code>,<code>cookie</code>…等功能,是一个取代Python内置urllib的有力选择.</p>
+<h2 id="在Python3的基础上开始工作"><a href="#在Python3的基础上开始工作" class="headerlink" title="在Python3的基础上开始工作"></a>在Python3的基础上开始工作</h2><p><strong>首先</strong>我们要对前端知识要有一定的了解,我们要会分析网站页面html上的标签的含义,我们找到豆瓣一拍的网页,用f12来查看网页源代码,找到页面链接以及,每个链接打开后的图片链接,当我们取得<code>&lt;a/&gt;</code>标签和<code>&lt;div/&gt;</code>的<code>class</code>类后,我们就可以使用BeautifulSoup来分离出链接地址了,然后使用<code>for</code>循环依次遍历列表,把网页中的翻页链接链接全部查找完,然后再把每个页面的图片下载下来.<br>在此处贴上源码:(后续仍会更新,视学习进度而定)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</div><div class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div><div class="line">headers = &#123;</div><div class="line"><span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">51</span>):</div><div class="line">	url = <span class="string">"https://ypy.douban.com/package?page="</span>+str(i)</div><div class="line">	r = requests.get(url, headers = headers)</div><div class="line">	bsObj = BeautifulSoup(r.text, <span class="string">"html.parser"</span>) <span class="comment">#urllib.request不需要加`.text`</span></div><div class="line">	imagesSet = bsObj.findAll(<span class="string">"a"</span>, &#123;<span class="string">"class"</span>: <span class="string">"lnk-pic-card"</span>&#125;)</div><div class="line">	<span class="keyword">for</span> image <span class="keyword">in</span> imagesSet:</div><div class="line">		photoUrl = <span class="string">"https://ypy.douban.com"</span>+image[<span class="string">"href"</span>]</div><div class="line">		r1 = requests.get(photoUrl, headers = headers)</div><div class="line">		bsObj1 = BeautifulSoup(r1.text, <span class="string">"html.parser"</span>)</div><div class="line">		images = bsObj1.findAll(<span class="string">"div"</span>, &#123;<span class="string">"class"</span>: <span class="string">"pic-wrapper"</span>&#125;)</div><div class="line">		<span class="keyword">for</span> image1 <span class="keyword">in</span> images:</div><div class="line">			photoName = image1.img.attrs[<span class="string">"data-src"</span>][<span class="number">28</span>:]+<span class="string">".jpg"</span> <span class="comment">#创造独一无二的文件名</span></div><div class="line">			urlretrieve(image1.img.attrs[<span class="string">"data-src"</span>], photoName) <span class="comment">#Python自带的保存多媒体文件的方法</span></div><div class="line">	print(i) <span class="comment">#打印下载的页数信息</span></div></pre></td></tr></table></figure></p>
 
     
 
@@ -437,8 +418,8 @@
     <!-- 多说评论框 start -->
     <div class="ds-thread"
         data-thread-key=""
-        data-url="https://echohsq.github.io/2017/01/18/hexo-build-install/"
-        data-title="hexo的部署与安装">
+        data-url="https://echohsq.github.io/2017/02/04/python3-web-crawling/"
+        data-title="python3成果与笔记">
     </div>
     <!-- 多说评论框 end -->
 </div>
@@ -454,21 +435,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/04/python3-web-crawling/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/01/18/introduction/" id="post_nav-older" class="next-content">
+        <a href="/2017/01/18/hexo-build-install/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

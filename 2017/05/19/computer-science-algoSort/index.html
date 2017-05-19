@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 程序安装 | 
+            排序算法合集 | 
         
         EchoHao
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://echohsq.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 程序安装 | EchoHao">
+    <meta property="og:title" content="排序算法合集 | EchoHao">
     <meta property="og:description" content="developer">
 
     <!--[if lte IE 9]>
@@ -200,91 +200,257 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
     
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#“桶排-快排-归并-希尔…”"><span class="post-toc-number">1.</span> <span class="post-toc-text">“桶排,快排,归并,希尔…”</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#桶排法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">桶排法:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#快速排序"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">快速排序:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#归并排序"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">归并排序:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#希尔排序-冒泡排序简介"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">希尔排序,冒泡排序简介:</span></a></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://picc.tangjianpeng.com/hexo1-1.png)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-5-19/24519810-file_1495204298802_16125.png)">
     
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/01/18/hexo-build-install/">hexo的部署与安装</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            之前的有学生优惠的腾讯云被我架设了一个WordPress,还没玩爽,因为没有备案而偃旗息鼓了,只好转战我大hexo了
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/01/18/hexo-build-install/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Echo Hao's avatar">
-            </div>
-            <div>
-                <strong>Echo Hao</strong>
-                <span>1月 18, 2017</span>
-            </div>
+            <p class="article-headline-p">
+                排序算法合集
+            </p>
         </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+
+
+
+
+
                 
-            </span>
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="" data-count-type="comments"></span>
-                </span>
-            
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Echo Hao</strong>
+        <span>5月 19, 2017</span>
+    </div>
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0klEQVR42u3aUVLjQAwE0Nz/0uwBqJiWZFhn9PxFETPWcz7EtOb1tfJ6YWNjY2NjY2NjYz+S/Yqvd/d///339a/v+aHcN2vmNWNjY2NvYE8enKyTv6zrO0c1Y2NjYy9g9x75roik0Oun5H+VfA3Y2NjY2EmTyJtWsnJ1e4ONjY2NPWFfr5OUnm91sLGxsbEnoVJ1K1Jtfr3X9OtZGjY2Nvbj2dVB7xN+/g/zbWxsbOxHsntXcowmZ+RPGdWMjY2NfSi7GtZPPr0rYEo2ReUsDRsbG/tj2b2FkhFvNZC65lUP9GBjY2PvZOdD1skB+slgIK8BGxsbexu7tyHJwcnK+RggaWNRloaNjY19BDtZtLpF6bWoP21g2NjY2IeyJ+0k34Tkh2/yUCkKp7CxsbHXsJOtwuTV9H7fGyFgY2Nj72TfO6ZN4qdqo0oaXiFUwsbGxv5wdhSsFx/T2ypUV8ubLjY2NvZOdj4SmET8eQjVa2zY2NjYG9i9wcBkhTyKqm48yqESNjY29hHs6qig2myqTa43eIhqxsbGxj6U3ftHvzqg/SG4rwJaowhsbGzsU9k9fFJi9QhOHlTlrwYbGxt7D7tXerLlSAD5p73RMjY2NvY29uSg5F1jhqS2JMbCxsbG3sDuRfbV4WuvCSUDieZWBBsbG/sgdq+NzYOhPDxK4i1sbGzszew81kmGuNU7bzhSGY97sbGxsU9lV7clvY1KAuhd+RgYGxsb+1R23k7ylxIVUWxRyYWNjY29kz1vGNUofxI8RVuOd18MNjY29qHseXsoN5JxeFR9CjY2NvYGdm/oW21jSQvsHeWJqsXGxsZewO61oupg+K6DnuXXgY2NjY1djJaqsVT1CGZ1YIyNjY2NXS2u16LmjfBXGhg2Njb2h7DzUKl3sLL6KucRFTY2NvYe9g1HGycFFe/JN0vY2NjYG9h7LmxsbGxsbGxsbOzHXP8AH4KHKXHxBYMAAAAASUVORK5CYII=">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/算法/">算法</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=排序算法合集&url=https://echohsq.github.io//2017/05/19/computer-science-algoSort/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/05/19/computer-science-algoSort/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/05/19/computer-science-algoSort/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=排序算法合集&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/05/19/computer-science-algoSort/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="“桶排-快排-归并-希尔…”"><a href="#“桶排-快排-归并-希尔…”" class="headerlink" title="“桶排,快排,归并,希尔…”"></a>“桶排,快排,归并,希尔…”</h1><a id="more"></a>
+<p>学了这么多排序方法,什么使用场景?怎么选用效率最高?要搞清楚,不如让我们从头分析一遍.</p>
+<h2 id="桶排法"><a href="#桶排法" class="headerlink" title="桶排法:"></a>桶排法:</h2><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序:"></a>快速排序:</h2><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序:"></a>归并排序:</h2><h2 id="希尔排序-冒泡排序简介"><a href="#希尔排序-冒泡排序简介" class="headerlink" title="希尔排序,冒泡排序简介:"></a>希尔排序,冒泡排序简介:</h2>
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread"
+        data-thread-key=""
+        data-url="https://echohsq.github.io/2017/05/19/computer-science-algoSort/"
+        data-title="排序算法合集">
+    </div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/04/14/ui-design/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
         </div>
     </div>
-</div>
 
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
 
 
                     
@@ -465,6 +631,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

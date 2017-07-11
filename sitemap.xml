@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://echohsq.github.io/2017/01/18/hexo-build-install/</loc>
+    
+    <lastmod>2017-07-11T09:39:46.930Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://echohsq.github.io/2017/07/10/git-commonds/</loc>
     
     <lastmod>2017-07-10T14:54:50.767Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://echohsq.github.io/2017/02/24/computer-science-algorithm/</loc>
     
     <lastmod>2017-02-24T15:14:57.713Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://echohsq.github.io/2017/01/18/hexo-build-install/</loc>
-    
-    <lastmod>2017-02-04T12:52:42.394Z</lastmod>
     
   </url>
   

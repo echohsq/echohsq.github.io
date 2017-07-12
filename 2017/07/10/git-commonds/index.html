@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Git-本地库命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">Git 本地库命令:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在进行任何git操作时-都必须处在git仓库目录下-所以我们第一步要掌握的就是"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">在进行任何git操作时,都必须处在git仓库目录下,所以我们第一步要掌握的就是:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#接下来我们在该目录下创建git仓库"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">接下来我们在该目录下创建git仓库:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#我常用的一些alias"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">我常用的一些alias:</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -384,7 +384,21 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <p><strong>用Git的一些常用命令,原谅我脑子不好,看到的这些抄下来才放心!</strong><br><a id="more"></a></p>
+<h1 id="Git-本地库命令"><a href="#Git-本地库命令" class="headerlink" title="Git 本地库命令:"></a>Git 本地库命令:</h1><h2 id="在进行任何git操作时-都必须处在git仓库目录下-所以我们第一步要掌握的就是"><a href="#在进行任何git操作时-都必须处在git仓库目录下-所以我们第一步要掌握的就是" class="headerlink" title="在进行任何git操作时,都必须处在git仓库目录下,所以我们第一步要掌握的就是:"></a>在进行任何git操作时,都必须处在git仓库目录下,所以我们第一步要掌握的就是:</h2><ul>
+<li>mkdir test(创建文件夹test)</li>
+<li>cd test(切换到test目录)</li>
+<li>touch a.md(新建a.md文件)<h2 id="接下来我们在该目录下创建git仓库"><a href="#接下来我们在该目录下创建git仓库" class="headerlink" title="接下来我们在该目录下创建git仓库:"></a>接下来我们在该目录下创建git仓库:</h2>1.<strong>使用最多的一条命令:git status</strong>,<strong>git status</strong>命令为查看当前仓库的状态,使用非常频繁.<br>2.接下来我们初始化第一个仓库:<strong>git init</strong><br>3.当我们初始化完成后,我们已经在文件夹中添加了一个a.md文件,所以我们要为该文件添加一个追踪(就是提交到我们的仓库中)该命令为<strong>git add <file></file></strong>这时我们就将a.md写入到提交的缓存当中,当我们如果不想提交时可以使用<strong>git rm –cached</strong>来移除这个缓存.<br>4.add进缓存之后就是提交到仓库了,这时我们使用<strong>git commit</strong>,具体操作为<strong>git commit -m’first commit’</strong>,commit是提交,而-m后输入的是我们提交时的提交信息.(有没有可以add和commit合体的操作?当然有,我们可以使用<strong>git commit -a -m’first commit’</strong>)<br>5.<strong>git log</strong>可以查看commit记录.<br>6.<strong>git branch</strong>团队合作利器:当我们git init后, 我们会默认有一个master目录,当我们想新建一个分支时,可以使用<strong>git branch a</strong>这个命令来新建一个a分支,再用<strong>git checkout a</strong>来切换到a分支,合起来使用的话就是<strong>git checkout -b a</strong><br>7.写完自己分支后的合并<strong>git merge</strong>,具体操作为先切换到master主目录,然后我们使用<strong>git merge a</strong>来将a目录来合并来,然后我们再使用<strong>git branch -d/D(强制删除)</strong>(<strong>git branch -d a</strong>)来删除分支a<br>8.<strong>git tag</strong>创建版本号,具体操作为<strong>git tag v1.0</strong>,切换到某一版本时我们使用,<strong>git checkout v1.0</strong><h2 id="我常用的一些alias"><a href="#我常用的一些alias" class="headerlink" title="我常用的一些alias:"></a>我常用的一些alias:</h2></li>
+</ul>
+<ul>
+<li>git c = git commit</li>
+<li>git s = git status</li>
+<li>git co = git checkout</li>
+<li>git br = git branch</li>
+<li>git plm = git pull origin master</li>
+<li>git psm = git push origin master</li>
+</ul>
+
     
 
     

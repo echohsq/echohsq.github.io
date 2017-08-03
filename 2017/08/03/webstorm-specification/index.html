@@ -10,7 +10,7 @@
     
     <title>
         
-            归档: 2017/1 | 
+            Webstorm入门指南 | 
         
         EchoHao
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://echohsq.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/1 | EchoHao">
+    <meta property="og:title" content="Webstorm入门指南 | EchoHao">
     <meta property="og:description" content="developer">
 
     <!--[if lte IE 9]>
@@ -200,150 +200,256 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
         
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-7-11/9232370.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-8-3/77206701.jpg)">
+    
+            <p class="article-headline-p">
+                Webstorm入门指南
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Echo Hao</strong>
+        <span>8月 03, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACy0lEQVR42u3aQXLjMAwEQP//09kHuBINADmrgM2Ty5FFNXWYEMTr68jxwsbGxsbGxsbGxn4k+xWPi5sO7vB+zfv173+tzoiNjY29m52Qkm++mzhhJKTRM2NjY2MfwE6myaMlecT8+nyZsLGxsbET9nfXJMFW3cwkS4CNjY2NPQmw6tal+hkbGxsb+96iUh4t+fXzEtXHa2nY2NjYj2fnh6bP+fyr59vY2NjYD2ZXR7WVJwmq6jfNJ8fGxsZeyq62y0wKQMl2JW/3Kbd4YmNjY69mJwX3HNlbrHuXDxsbG/tMdrUR5+fHndytVza6mAUbGxt7KbsaJ9UGzepRRHXhCuUqbGxs7NXsyTRJ+FWRd82CjY2NfSY7ObKtLly1GPSJA2BsbGzsrexe8FRbJKvg3mjW0rCxsbGXsr9aI2md6R0M3zAXNjY29mp29bHywlByPDwJp+QzNjY29gnsSaGn11iT4KtFpYtWHmxsbOzV7DzAfm7lmRwb9Hg5HhsbG3srO3+IPJDyElWyXcnj8OLO2NjY2MewJ//052Ez2djkhSRsbGzs09iT0vwkhKq86mvDxsbG3s3Oj2/zX/XiKo/P5iE0NjY29lJ2XhLqFZXmAdmLwyi3sbGxsVewk6aZSdtN3oKZvIDJi8HGxsbezf5cuX+yXaluhy6OfrGxsbFXs3sbhmrDTflo9qZXgo2NjX0au1pgyht6kt/m0ZX8FhsbG/s0dh5j+dLMQysZowDDxsbG/uPs6ugVj6qBVCj650GIjY2NvZRdDYnJ4+aRNonGQm5jY2NjL2LnoVVodmyVnPLgTGbBxsbGPo1dPZpN4q0316/W0rCxsbEPZufF/Wo05u04/yHAsLGxsVewq4uSb0jyO+RHFNjY2NjnsKsFnUnJKS8w3bbQ2NjY2KvZvcJNITxuWo5Rqyg2Njb2UvY5AxsbGxsbGxsbG/sx4x/UoHIUss9vCQAAAABJRU5ErkJggg==">
+        </ul>
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/01/18/hexo-build-install/">hexo的部署与安装</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/webstorm-IDE/">webstorm,IDE</a>
+    </ul>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
         
-            之前的有学生优惠的腾讯云被我架设了一个WordPress,还没玩爽,因为没有备案而偃旗息鼓了,只好转战我大hexo了
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
         
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/01/18/hexo-build-install/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Echo Hao's avatar">
-            </div>
-            <div>
-                <strong>Echo Hao</strong>
-                <span>1月 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
+    
 
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="" data-count-type="comments"></span>
-                </span>
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Webstorm入门指南&url=https://echohsq.github.io//2017/08/03/webstorm-specification/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/08/03/webstorm-specification/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/08/03/webstorm-specification/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=Webstorm入门指南&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/08/03/webstorm-specification/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
 </div>
 
-        
-        
-    
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://image.uisdc.com/wp-content/uploads/2013/06/%E6%89%81%E5%B9%B3%E5%8C%96%E9%85%8D%E8%89%B2%E5%AE%9D%E5%85%B82.jpg)">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/01/18/introduction/">写个前言</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome:差不多一天半的建站时间,学到了很多~~
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/01/18/introduction/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Echo Hao's avatar">
-            </div>
-            <div>
-                <strong>Echo Hao</strong>
-                <span>1月 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
                 
-            </span>
 
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="" data-count-type="comments"></span>
-                </span>
-            
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>工欲善其事必先利其器,我们做前端的不用总是使用一些看起来很极客<br>的编辑器了,让我们来看一看强大的webstorm.<br><a id="more"></a></p>
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    
+
+    
 </div>
 
-        
-        
-    
 
-    
+                
 
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
     }
-</script>
-
-    
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread"
+        data-thread-key=""
+        data-url="https://echohsq.github.io/2017/08/03/webstorm-specification/"
+        data-title="Webstorm入门指南">
+    </div>
+    <!-- 多说评论框 end -->
 </div>
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/07/10/git-commonds/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

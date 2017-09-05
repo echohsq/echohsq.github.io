@@ -10,7 +10,7 @@
     
     <title>
         
-            hexo的部署与安装 | 
+            HTML5(三) | 
         
         EchoHao
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://echohsq.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="hexo的部署与安装 | EchoHao">
+    <meta property="og:title" content="HTML5(三) | EchoHao">
     <meta property="og:description" content="developer">
 
     <!--[if lte IE 9]>
@@ -226,7 +226,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装篇"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装篇:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境配置"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">环境配置:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo的安装"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">hexo的安装:</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#部署篇"><span class="post-toc-number">2.</span> <span class="post-toc-text">部署篇:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#填坑篇"><span class="post-toc-number">3.</span> <span class="post-toc-text">填坑篇:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#后续使用篇"><span class="post-toc-number">4.</span> <span class="post-toc-text">后续使用篇:</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#新增的元素—取代部分div"><span class="post-toc-number">1.</span> <span class="post-toc-text">新增的元素—取代部分div</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -251,10 +251,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-7-11/9232370.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-8-14/31862135.jpg)">
     
             <p class="article-headline-p">
-                hexo的部署与安装
+                HTML5(三)
             </p>
         </div>
 
@@ -273,7 +273,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Echo Hao</strong>
-        <span>1月 18, 2017</span>
+        <span>9月 05, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -294,7 +294,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC4UlEQVR42u3aQW7jQAwEQP//09lrgMRON0ebyDOl00IwpCkFWIJsPj6OvB7Y2NjY2NjY2NjYt2Q/4uvr7/MnPHvjszuf738DKM+MjY2NfQL7h//6vxzx2etfw5IntOfJf4ONjY19Avs1oy1gT18ff478zxC9FxsbGxu7LRhxSzNrfrCxsbGxrypg+W9evyVvObCxsbGxLxjQxEP5tp1o2b80S8PGxsa+PbttDO7w7z/It7GxsbFvyZ5ds5CgbXXychidGRsbG3tTdttmtFFuOxJqF3ryT4aNjY29KzsvUe3oP1nEaWOGpVEUNjY29tbstj3IB/TtUk6+stOGxNjY2Ni7slcag7zxmBWethAOOzBsbGzs7dj5yk4+nMqf35bG4jzY2NjYW7NnrcUMeVUwUJ8fGxsbe1P2LCRox0btMGg2YLps+RIbGxv7rdgroezsY62XqOFyDzY2Nvam7GQVpi0q+YfISfnT6nwbGxsbeyN2PlpqI9v8mXmoXIcK2NjY2Aew25LWlqhZGWvvD+s2NjY29puz20FSvnyTHDp/ztJSETY2Nvam7LbkJKUoD4PzxqONdX9oRbCxsbG3Y+cD93ZBZ9aQ5AOjPKjAxsbG3pXdrsjkQe962LBe6rCxsbFPY88w+erMbDy0XkqxsbGx92bPGoP89+vDprrleHYGbGxs7K3ZH/E1fOVFKzvtebCxsbHPYa9HsEnJWRlg5fi6bmNjY2NvwV6JfnN8fufa+9jY2NjnsPNBUh4AJI1H267kFzY2NvYJ7PbKR/ZXtTSzALjIt7GxsbHfnN0Wg9ny5cqyzsq4ChsbG/sc9krRmhWePDZoP9ZlKzvY2NjYb8ieLUHmAe1V8W276ImNjY2NnTcVsyFRuyo0K5zY2NjY2Hko+7oUtfgWjI2NjX0yux395GOgtvFog+elTSVsbGzsLdj/I+i9KkLIP+st8m1sbGzsX2efc2FjY2NjY2NjY2Pf5voH3bCa3X0OxA4AAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACbElEQVR42u3awW7CMBAE0Pz/T7fXShVlZh0nKXo+IYjAL4d4md3j66PXgYeHh4eHh4eH9zDeEa+f1796/fv69rdW9oaHh4d3Je/NozYmJVtMfmW2Nzw8PLzreclhcNamZ7c12hseHh7ew3h/l8uvAMktSH4XDw8P7z/yknfaT2flOx4eHt4TeCsxQbKt5NObsxY8PDy8mHdWA2zH6wf19/Dw8PBmI01xgJsHE8n3FDvEw8PD28xLyt/1xv+sDZZ85zBrwcPDwzuVNwsR2kOiHdgqjhk8PDy8S3iz1n4b8raHUH4L8PDw8O7i5aFAXny37a6VsQM8PDy8a3g5pg4F4oHX2aBqdDDg4eHhXchrx6FmZfQs5nizNzw8PLzNvLbMnQ0BrA9yFdEJHh4e3mZeGzfkh8TsEd/eAjw8PLy7ePkDvY0wkhbXbHABDw8P7zm8lUHSWfyaDAosxbh4eHh4p/LWW/55m399GKs+GPDw8PC28ZKSt72+HpZaCIjx8PDwruStxAR5E2vW7pqFI3h4eHi7efUwaHB9GzTkvOgIwcPDw9vMa4cGktJ2ZRjrhGAXDw8P7xJe/le/jYCTW9A22968j4eHh7eZl4cObRGcP9CPchUHAx4eHt4GXrvy4ar6gf53OJt/Px4eHt5m3srjOGlHtcdMXnbj4eHh3ctbajjFUULSTssD3/ofAx4eHt4G3qw4bovslRUV33h4eHgP453bEkvCiPZYwsPDw3smr93KrOxujwQ8PDy863nt2FMCTkKHtgQfHgx4eHh4p/JWgoDZpttyuThm8PDw8DbzPm/h4eHh4eHh4eE9YH0DjaPjXx+rGrMAAAAASUVORK5CYII=">
         </ul>
     
 
@@ -306,7 +306,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/程序安装/">程序安装</a>
+        <a class="post_tag-link" href="/tags/前端/">前端</a>
     </ul>
     
 
@@ -333,7 +333,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=hexo的部署与安装&url=https://echohsq.github.io//2017/01/18/hexo-build-install/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=HTML5(三)&url=https://echohsq.github.io//2017/09/05/newCharacter/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -345,7 +345,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/01/18/hexo-build-install/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/09/05/newCharacter/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -354,7 +354,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/01/18/hexo-build-install/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/09/05/newCharacter/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -366,7 +366,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=hexo的部署与安装&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/01/18/hexo-build-install/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=HTML5(三)&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/09/05/newCharacter/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -384,30 +384,14 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p><strong>之前的有学生优惠的腾讯云被我架设了一个WordPress,还没玩爽,因为没有备案而偃旗息鼓了,只好转战我大hexo了</strong><br><a id="more"></a></p>
-<h1 id="安装篇"><a href="#安装篇" class="headerlink" title="安装篇:"></a>安装篇:</h1><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置:"></a>环境配置:</h3><p> 1.<a href="https://nodejs.org/zh-cn/" target="_blank" rel="external"><strong>node js</strong></a>(点击下载,建议LTS版本)<br> 2.<a href="https://git-scm.com/downloads" target="_blank" rel="external"><strong>git</strong></a><br> 3.<a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external"><strong>Cmd MarkDown</strong></a><br> 依次下载后就可以安装啦,如果你看过其他的博客的话,不用配置环境,按照软件的默认设置安装就好,唯一需要注意的是,node js和git软件的安装一定要记得把path项勾上(当然path原本是勾选的),不需要什么特别配置,一路next就好啦.<br> 当node js和git安装好后,我们要先检查一下,是否可以调用,用win+r打开运行,输入cmd,通过两个命令来检查一下是否安装就位:</p>
-<blockquote>
-<p>node -v<br>git –version</p>
-</blockquote>
-<p> 如果显示:<br><img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/33971846-file_1484810705658_10d4f.png" alt=""><br><strong>恭喜你</strong>,第一步成功了!</p>
-<h3 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装:"></a>hexo的安装:</h3><p>1.利用npm安装:<br><code>npm install hexo-cli -g</code><br>稍等片刻,我们的hexo便会安装成功了.<br>2.还记得我们的git么?<br>  现在就是git出马的时候了,如果你还不知道的git版本控制,那么请先花10分钟阅读一下维基百科上关于git和github以及之后我们要部署的github pages的相关内容.<br>  看完了?对么,那么让我们开始吧,如果没有记错的话,这时你的右键菜单中一定会多出两个这种东西<br>  <img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/63269076-file_1484811680435_103d5.png" alt=""></p>
-<blockquote>
-<p>Git GUI here和Git Bash here</p>
-</blockquote>
-<p>  这就是我们需要的,GUI是图形窗口,图形窗口谁不会啊,所以我们选择打开bash,依次输入:<code>cd d:/</code><br>  <code>mkdir hexo &amp;&amp; cd hexo</code><br> <img src="http://ok0j3sdwn.bkt.clouddn.com/17-1-19/91348084-file_1484812335278_a45a.png" alt=""><br> 然后执行:<br> <code>hexo init</code> 初始化hexo仓库<br> 安装依赖包:<br> <code>npm install</code><br> 这时我们的hexo博客便已经搭建完成了.<br> 执行<code>hexo g</code> 生成静态html的代码<br> 再在bash中执行<code>hexo s --debug</code>就可在浏览器中输入<a href="http://localhost:4000来访问自己的博客啦!" target="_blank" rel="external">http://localhost:4000来访问自己的博客啦!</a></p>
-<h1 id="部署篇"><a href="#部署篇" class="headerlink" title="部署篇:"></a>部署篇:</h1><p> 关于github的账号注册以及创建repository问题,可参阅<a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="external">这里</a>.本篇不再累述.<br> 假设仓库已经准备好了,建议仓库地址使用ssh.具体可参阅stormZhang的公众号.<br> 这时打开hexo目录下的<code>_config.yml</code>文件(使用sublime)滑到文件最底端,按照我的模板填写:</p>
-<blockquote>
-<p>deploy:<br>    type: git(注意,冒号之后有一个空格)<br>    repo: 复制的仓库链接<br>    branch: master</p>
-</blockquote>
-<p>这时进入bash中,执行:<br><code>npm install hexo-deployer-git --save</code>(防止出现不能识别git的错误)<br><code>hexo g</code><br><code>hexo d</code><br>这时浏览器中输入username.github.io即可访问你的博客了;可能你会觉的他的默认主题很丑,这是我们就需要在主题上花一番功夫了,<a href="http://www.cnblogs.com/dantefung/p/d8c48ba8030bcab7cfc364d423186fee.html" target="_blank" rel="external">这里</a>写的很好.</p>
-<h1 id="填坑篇"><a href="#填坑篇" class="headerlink" title="填坑篇:"></a>填坑篇:</h1><ul>
-<li>github的repository和theme部分我没有写,只是需要注意的是安装完hexo后的操作,全部需要在git bash中进行,千万不要在cmd中输入命令.</li>
-<li>CNAME问题:<br>当你有自己的域名时可以选择绑定到自己的域名,在你自己注册域名的地方设置两条CNAME跳转,分别是@匹配和www匹配,地址输入<code>username.github.io</code>,然后在hexo文件夹下的public文件夹下新建一个名为CNAME(注意大小写,没有后缀名),输入你自己的域名就好了.</li>
-</ul>
-<ul>
-<li>public文件夹不更行问题,这个问题可能比较小众,一般都是由于你的主题配置文件<code>_config.yml</code>更改的格式不对,这时我们需要在<code>hexo g</code>时,注意输出的提示,观察哪里出现了问题,一般都是主题的插件没有安装,而开启了相应功能<h1 id="后续使用篇"><a href="#后续使用篇" class="headerlink" title="后续使用篇:"></a>后续使用篇:</h1>/c/Users/h/AppData/Roaming/npm/hexo: line 12: node: command not found<br>(更新于2017-02-04)<br>在我配置好java的环境变量后,Git bash敲下命令hexo g，居然出现上述错误信息，然后发现输入任何有关hexo的命令都是同样的错误，我又试着敲了npm这个命令，发现也是出错的，于是我想估计是环境变量设置有问题，我在用户的环境变量PATH中添加了两个路径，分别是C:\Users\h\node_modules\hexo\bin和C:\software\nodejs，再加上原来就添加的路径C:\Users\h\AppData\Roaming\npm，发现就解决这个问题了，可以正常修改博文，然后发布网站。</li>
-</ul>
-<p>不过，我也不清楚是否完全解决这个问题，还需要观察一段时间。</p>
+        <p>HTML5学习笔记.<br><a id="more"></a></p>
+<h1 id="新增的元素—取代部分div"><a href="#新增的元素—取代部分div" class="headerlink" title="新增的元素—取代部分div"></a>新增的元素—取代部分div</h1><ol>
+<li>头部 (header)</li>
+<li>脚部 (footer)</li>
+<li>分区 (section)</li>
+<li>文章 (article)</li>
+<li>间隔 (nav)</li>
+</ol>
 
     
 
@@ -437,8 +421,8 @@
     <!-- 多说评论框 start -->
     <div class="ds-thread"
         data-thread-key=""
-        data-url="https://echohsq.github.io/2017/01/18/hexo-build-install/"
-        data-title="hexo的部署与安装">
+        data-url="https://echohsq.github.io/2017/09/05/newCharacter/"
+        data-title="HTML5(三)">
     </div>
     <!-- 多说评论框 end -->
 </div>
@@ -454,21 +438,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/04/python3-web-crawling/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/01/18/introduction/" id="post_nav-older" class="next-content">
+        <a href="/2017/08/14/canvas/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://echohsq.github.io/about/index.html</loc>
+    <loc>https://echohsq.github.io/2017/04/13/april-talks/</loc>
     
-    <lastmod>2017-11-14T15:03:37.516Z</lastmod>
+    <lastmod>2018-01-03T10:33:22.723Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://echohsq.github.io/2017/11/14/java-sqrt/</loc>
+    <loc>https://echohsq.github.io/2017/02/25/longest-palindromes/</loc>
     
-    <lastmod>2017-11-14T14:48:35.648Z</lastmod>
+    <lastmod>2018-01-03T10:31:28.194Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://echohsq.github.io/2017/11/14/union-find/</loc>
+    
+    <lastmod>2017-12-20T02:44:01.610Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://echohsq.github.io/about/index.html</loc>
+    
+    <lastmod>2017-11-14T15:03:37.516Z</lastmod>
     
   </url>
   
@@ -61,20 +75,6 @@
     <loc>https://echohsq.github.io/2017/04/14/ui-design/</loc>
     
     <lastmod>2017-04-14T14:42:15.969Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://echohsq.github.io/2017/04/13/april-talks/</loc>
-    
-    <lastmod>2017-04-13T11:44:58.434Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://echohsq.github.io/2017/02/25/longest-palindromes/</loc>
-    
-    <lastmod>2017-03-26T15:02:59.389Z</lastmod>
     
   </url>
   

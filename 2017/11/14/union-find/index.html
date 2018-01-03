@@ -10,7 +10,7 @@
     
     <title>
         
-            归档: 2017/2 | 
+            连通算法(union-find) | 
         
         EchoHao
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://echohsq.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/2 | EchoHao">
+    <meta property="og:title" content="连通算法(union-find) | EchoHao">
     <meta property="og:description" content="developer">
 
     <!--[if lte IE 9]>
@@ -200,209 +200,265 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
     
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#“架设网络-寻找朋友-电子电路的连通-你需要union-find-”"><span class="post-toc-number">1.</span> <span class="post-toc-text">“架设网络,寻找朋友,电子电路的连通?你需要union-find!”</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基本概念"><span class="post-toc-number">2.</span> <span class="post-toc-text">基本概念:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量名等价性"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">变量名等价性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数学集合"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">数学集合</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定义术语"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">定义术语</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#union-find的API"><span class="post-toc-number">3.</span> <span class="post-toc-text">union-find的API:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#quick-find实现方法"><span class="post-toc-number">4.</span> <span class="post-toc-text">quick-find实现方法:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#quick-union实现方法"><span class="post-toc-number">5.</span> <span class="post-toc-text">quick-union实现方法:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#加权quick-union实现方法"><span class="post-toc-number">6.</span> <span class="post-toc-text">加权quick-union实现方法:</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/18-1-3/49711597.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-11-14/20397786.jpg)">
+    
+            <p class="article-headline-p">
+                连通算法(union-find)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Echo Hao</strong>
+        <span>11月 14, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXklEQVR42u3aUW4DIQwFwNz/0u0Bqt08Y3C20fAVJdvAUAnIw6+fr24vPDw8PDw8PDy8h/Fecav+VfL83083jA0PDw9vhPdmqb195mqgV4yE1BkbHh4e3iSvOqwc0+krfx4PDw/vv/CqU3CuXzw8PLwn864igzeH3cMbCR4eHt48rxo3dCLXq34/nLXg4eHhxby1Yc28Hr3fw8PDwwt45ZKmYqHA2lXZx2rK8PDw8AJeNX5NwGtlBNvGg4eHhzfCux/c/Tt5YVbe19oY8PDw8GZ4nSW+en1ViGI7U4mHh4d3mJdc+VefrxYTrJUOXF6h4eHh4R3mrRUErA0umY5kWyqn1Hh4eHgHeJuX5mKrbjlv/iV4eHh4g7x8w8iDjPtjejJB1YADDw8P71O8vGjg/v28LCDvfTGlxsPDw9vEq5YLlJfp9tZS3XLw8PDwTvOq3VSjgSSeyC/SkkAEDw8Pb5LXKSftxLLVY/fBmjI8PDy8pV/reVRRPUBXpyzfVPDw8PDmeXmommwb1aW8H+zi4eHhfYpXPf6uHYKrW0I1PsbDw8Ob4SUD3dDxpqP2hl8MeHh4eFt51eN1f6DVqWltDHh4eHgHeB1GJ6rI25ujPx4eHt5hXrV1wtboQFw8duPh4eHN83Ytx/mRuhP+JtdpeHh4eDO8vMSqM5RWOJtPPR4eHt4gby1g7YSwebSRhBp4eHh4T+b1l/6934OHh4f3fF5nQV/7zvxnAB4eHt4kLwkjkk+TcCEvzBqNcfHw8PAOXIDlUcJawUE12MXDw8Ob531fw8PDw8PDw8PDe0D7BZmCkGxSPKmuAAAAAElFTkSuQmCC">
+        </ul>
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/25/longest-palindromes/">求解最长回文子串</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/算法/">算法</a>
+    </ul>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
         
-            当前的利益都是短小的,将来的梦想的实现才是伟大的~坚持吧!年轻人.
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
         
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/25/longest-palindromes/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Echo Hao's avatar">
-            </div>
-            <div>
-                <strong>Echo Hao</strong>
-                <span>2月 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
+    
 
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="" data-count-type="comments"></span>
-                </span>
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=连通算法(union-find)&url=https://echohsq.github.io//2017/11/14/union-find/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2017/11/14/union-find/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2017/11/14/union-find/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=连通算法(union-find)&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2017/11/14/union-find/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
 </div>
 
-        
-        
-    
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-2-24/71107793-file_1487943443552_f5b4.png)">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/24/computer-science-algorithm/">kmp算法详解</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            大二下半学期开始了,我们也开始学起了数据结构和算法,所以我打算写几篇关于算法的,所有的题目来自于hiho网站中的题库.
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/24/computer-science-algorithm/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Echo Hao's avatar">
-            </div>
-            <div>
-                <strong>Echo Hao</strong>
-                <span>2月 24, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
                 
-            </span>
 
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="" data-count-type="comments"></span>
-                </span>
-            
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="“架设网络-寻找朋友-电子电路的连通-你需要union-find-”"><a href="#“架设网络-寻找朋友-电子电路的连通-你需要union-find-”" class="headerlink" title="“架设网络,寻找朋友,电子电路的连通?你需要union-find!”"></a>“架设网络,寻找朋友,电子电路的连通?你需要union-find!”</h1><a id="more"></a>
+<p>#目的:<br>找到必须要连接的触点,实现两个触点的连接</p>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念:"></a>基本概念:</h1><h2 id="变量名等价性"><a href="#变量名等价性" class="headerlink" title="变量名等价性"></a>变量名等价性</h2><p>对同一个对象的多个引用.</p>
+<h2 id="数学集合"><a href="#数学集合" class="headerlink" title="数学集合"></a>数学集合</h2><p>处理一个整数对p,q时,我们判断它们是否属于相同的集合,如果不是,我们将对p所属的集合和q所属的集合归并,最终所有的整数都属于同一个集合.</p>
+<h2 id="定义术语"><a href="#定义术语" class="headerlink" title="定义术语"></a>定义术语</h2><ul>
+<li>对象称为触点</li>
+<li>整数对称为连接</li>
+<li>等价类称为连通分量,分量<h1 id="union-find的API"><a href="#union-find的API" class="headerlink" title="union-find的API:"></a>union-find的API:</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class UF</span></div><div class="line">             <span class="title">UF</span><span class="params">(<span class="keyword">int</span> N)</span> <span class="comment">//以整数标示(0到N-1)初始化N个触点</span></div><div class="line">       <span class="keyword">void</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> <span class="comment">//在p,q之间添加一条连接 </span></div><div class="line">       <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> p)</span> <span class="comment">//p所在的分量的标示符</span></div><div class="line">       <span class="keyword">boolean</span> <span class="title">connected</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> <span class="comment">//如果存在同一个分量返回true</span></div><div class="line">       <span class="keyword">int</span> <span class="title">count</span><span class="params">()</span> <span class="comment">//连通分量的数量</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="quick-find实现方法"><a href="#quick-find实现方法" class="headerlink" title="quick-find实现方法:"></a>quick-find实现方法:</h1><h1 id="quick-union实现方法"><a href="#quick-union实现方法" class="headerlink" title="quick-union实现方法:"></a>quick-union实现方法:</h1><h1 id="加权quick-union实现方法"><a href="#加权quick-union实现方法" class="headerlink" title="加权quick-union实现方法:"></a>加权quick-union实现方法:</h1>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    
 </div>
 
-        
-        
-    
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/17-2-4/97107324-file_1486176408022_fffa.jpg)">
-    
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/02/04/python3-web-crawling/">python3成果与笔记</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            python实战之爬取豆瓣一拍上的摄影图片在学校的时候就断断续续的学习Python3的基础知识,但是总想找一个实际项目练一练手,所以我选择了爬虫,好玩,好用,基础知识差不多也都用得上.
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/02/04/python3-web-crawling/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Echo Hao's avatar">
-            </div>
-            <div>
-                <strong>Echo Hao</strong>
-                <span>2月 04, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
                 
-            </span>
 
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="" data-count-type="comments"></span>
-                </span>
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-
-        locatePost = locatePost.next();
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
     }
-</script>
-
-    
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread"
+        data-thread-key=""
+        data-url="https://echohsq.github.io/2017/11/14/union-find/"
+        data-title="连通算法(union-find)">
+    </div>
+    <!-- 多说评论框 end -->
 </div>
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/08/14/canvas/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

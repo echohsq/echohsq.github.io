@@ -385,6 +385,32 @@
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p><strong>JavaWeb所需要的开发流程,还不赶紧mark一下吗?</strong><br><a id="more"></a></p>
+<p>#第一步:环境准备</p>
+<p>##1.Maven命令创建web骨架<br>mvn archetype:create -DgroupId=net.rocketa -DartifactId=mywebapp -DarchetypeArtifactId=maven-archetype-webapp</p>
+<p>注意web servlet版本（web.xml，3.1），Junit版本指定为4.X<br>（这样Spring好通过注解的方式来运行单元测试）</p>
+<p>##2.注意在IDEA中需要设置好Maven的<br>Sources/Tests/Resources/Test Resources属性。</p>
+<p>##3.日志依赖</p>
+<p>slf4j：规范和接口</p>
+<p>具体的日志实现有：</p>
+<p>log4j、logback、common-logging</p>
+<p>因此我们一般是使用slf4j接口+一种具体的日志实现+slf4j和这个具体日志实现的依赖整合</p>
+<p>##4.数据库依赖</p>
+<p>有2个依赖，需要注意，一个是驱动，一个是数据库连接池（C3P0，DBCP…）。</p>
+<p>驱动JAR包是运行期需要包含，编译期不需要的。</p>
+<p>##5.持久层框架依赖</p>
+<p>说白了，DAO层的框架依赖：MyBatis or Hibernate or ….</p>
+<p>比如除MyBatis本身的依赖需要引入之外，还需要引入MyBatis和Spring的整合依赖。</p>
+<p>##6.Web层依赖</p>
+<p>比如，JSP中使用到的一些JSTL、标签、Ajax访问JSON等，还有需要注意的是，在编译期需要引入servlet-api。</p>
+<p>##7.Spring核心依赖</p>
+<p>spring-core、spring-beans、spring-context</p>
+<p>##8.Spring和DB之间的整合依赖</p>
+<p>Spring是需要介入DB的管理的，比如它的声明式事务。</p>
+<p>spring-jdbc、spring-tx</p>
+<p>##9.Spring对Web的一些整合依赖</p>
+<p>spring-web、spring-webmvc</p>
+<p>##10.Spring对Junit的支持依赖</p>
+<p>spring-test</p>
 
     
 

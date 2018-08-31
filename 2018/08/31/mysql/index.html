@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.2.6 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            mysql使用教程 | 
+        
+        EchoHao
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Echo Hao">
+    <meta name="description" content="developer">
+    <meta name="keywords" content="null">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="EchoHao">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://echohsq.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="mysql使用教程 | EchoHao">
+    <meta property="og:description" content="developer">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+    body, html {
+        font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    }
+
+    a {
+        color: #00838F;
+    }
+
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important;
+    }
+
+    /* Sidebar User Drop Down Menu Text Color */
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+        color: #0097A7 !important;
+    }
+
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+        color: #0097A7 !important;
+    }
+
+    .toTop {
+        background: #757575 !important;
+    }
+
+    .material-layout .material-post>.material-nav,
+    .material-layout .material-index>.material-nav,
+    .material-nav a {
+        color: #757575;
+    }
+
+    #scheme-Paradox .MD-burger-layer {
+        background-color: #757575;
+    }
+
+    #scheme-Paradox #post-toc-trigger-btn {
+        color: #757575;
+    }
+
+    .post-toc a:hover {
+        color: #00838F;
+        text-decoration: underline;
+    }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5;
+        }
+
+        /* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+
+    <script src="/js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/highlight/solarized-white.css">
+
+    <!-- UC Browser Compatible-->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write('<link rel="stylesheet" href="/css/uc.css">');
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#mysql使用教程"><span class="post-toc-number">1.</span> <span class="post-toc-text">mysql使用教程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#—————————"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">—————————</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#—-命令行连接MySql———"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">—-命令行连接MySql———</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动mysql服务器"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">启动mysql服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关闭"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">关闭</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进入"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">进入</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#退出"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">退出</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#—————————-1"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">—————————</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#—-MySql用户管理———"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">—-MySql用户管理———</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改密码-首先在DOS-下进入mysql安装路径的bin目录下，然后键入以下命令"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">修改密码:首先在DOS 下进入mysql安装路径的bin目录下，然后键入以下命令:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#增加用户"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">增加用户</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#格式-grant-权限-on-数据库-to-用户名-登录主机-identified-by-‘密码’"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">格式:grant 权限 on 数据库.* to 用户名@登录主机 identified by ‘密码’</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#—————————-2"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">—————————-</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#—–MySql数据库操作基础—–"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">—–MySql数据库操作基础—–</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#显示数据库"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">显示数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断是否存在数据库wpj1105-有的话先删除"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">判断是否存在数据库wpj1105,有的话先删除</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建数据库"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">创建数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除数据库"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">删除数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用该数据库"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">使用该数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#显示数据库中的表"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">显示数据库中的表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#先判断表是否存在-存在先删除"><span class="post-toc-number">1.6.7.</span> <span class="post-toc-text">先判断表是否存在,存在先删除</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建表"><span class="post-toc-number">1.6.8.</span> <span class="post-toc-text">创建表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除表"><span class="post-toc-number">1.6.9.</span> <span class="post-toc-text">删除表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看表的结构"><span class="post-toc-number">1.6.10.</span> <span class="post-toc-text">查看表的结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入数据"><span class="post-toc-number">1.6.11.</span> <span class="post-toc-text">插入数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查询表中的数据"><span class="post-toc-number">1.6.12.</span> <span class="post-toc-text">查询表中的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改某一条数据"><span class="post-toc-number">1.6.13.</span> <span class="post-toc-text">修改某一条数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除数据"><span class="post-toc-number">1.6.14.</span> <span class="post-toc-text">删除数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#and-且"><span class="post-toc-number">1.6.15.</span> <span class="post-toc-text">and 且</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#or-或"><span class="post-toc-number">1.6.16.</span> <span class="post-toc-text">or 或</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#between"><span class="post-toc-number">1.6.17.</span> <span class="post-toc-text">between</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#in-查询制定集合内的数据"><span class="post-toc-number">1.6.18.</span> <span class="post-toc-text">in 查询制定集合内的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#排序-asc-升序-desc-降序"><span class="post-toc-number">1.6.19.</span> <span class="post-toc-text">排序 asc 升序  desc 降序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分组查询-聚合函数"><span class="post-toc-number">1.6.20.</span> <span class="post-toc-text">分组查询 #聚合函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查询第i条以后到第j条的数据-不包括第i条"><span class="post-toc-number">1.6.21.</span> <span class="post-toc-text">查询第i条以后到第j条的数据(不包括第i条)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#巩固练习"><span class="post-toc-number">1.6.22.</span> <span class="post-toc-text">巩固练习</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改数据"><span class="post-toc-number">1.6.23.</span> <span class="post-toc-text">修改数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用查询语句"><span class="post-toc-number">1.6.24.</span> <span class="post-toc-text">常用查询语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分组查询"><span class="post-toc-number">1.6.25.</span> <span class="post-toc-text">分组查询</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#聚合函数"><span class="post-toc-number">1.6.26.</span> <span class="post-toc-text">聚合函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改表的名字"><span class="post-toc-number">1.6.27.</span> <span class="post-toc-text">修改表的名字</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#格式-alter-table-tbl-name-rename-to-new-name"><span class="post-toc-number">1.6.28.</span> <span class="post-toc-text">格式:alter table tbl_name rename to new_name</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表结构修改"><span class="post-toc-number">1.6.29.</span> <span class="post-toc-text">表结构修改</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改表的名字-1"><span class="post-toc-number">1.6.30.</span> <span class="post-toc-text">修改表的名字</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#格式-alter-table-tbl-name-rename-to-new-name-1"><span class="post-toc-number">1.6.31.</span> <span class="post-toc-text">格式:alter table tbl_name rename to new_name</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#向表中增加一个字段-列"><span class="post-toc-number">1.6.32.</span> <span class="post-toc-text">向表中增加一个字段(列)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#格式-alter-table-tablename-add-columnname-type-alter-table-tablename-add-columnname-type"><span class="post-toc-number">1.6.33.</span> <span class="post-toc-text">格式:alter table tablename add columnname type;/alter table tablename add(columnname type);</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改表中某个字段的名字"><span class="post-toc-number">1.6.34.</span> <span class="post-toc-text">修改表中某个字段的名字</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表position-增加列test"><span class="post-toc-number">1.6.35.</span> <span class="post-toc-text">表position 增加列test</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表position-修改列test"><span class="post-toc-number">1.6.36.</span> <span class="post-toc-text">表position 修改列test</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表position-修改列test-默认值"><span class="post-toc-number">1.6.37.</span> <span class="post-toc-text">表position 修改列test 默认值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表position-去掉test-默认值"><span class="post-toc-number">1.6.38.</span> <span class="post-toc-text">表position 去掉test 默认值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表position-去掉列test"><span class="post-toc-number">1.6.39.</span> <span class="post-toc-text">表position 去掉列test</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表depart-pos-删除主键"><span class="post-toc-number">1.6.40.</span> <span class="post-toc-text">表depart_pos 删除主键</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表depart-pos-增加主键"><span class="post-toc-number">1.6.41.</span> <span class="post-toc-text">表depart_pos 增加主键</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用文本方式将数据装入数据库表中（例如D-mysql-txt）"><span class="post-toc-number">1.6.42.</span> <span class="post-toc-text">用文本方式将数据装入数据库表中（例如D:/mysql.txt）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导入-sql文件命令（例如D-mysql-sql）"><span class="post-toc-number">1.6.43.</span> <span class="post-toc-text">导入.sql文件命令（例如D:/mysql.sql）</span></a></li></ol></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://ok0j3sdwn.bkt.clouddn.com/18-8-31/85312836.jpg)">
+    
+            <p class="article-headline-p">
+                mysql使用教程
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Echo Hao</strong>
+        <span>8月 31, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACc0lEQVR42u3aS27DMAwFwNz/0u0BgriPpCS7wXgVIB9zvJCUR75+vvp64eHh4eHh4eHhPYz3iq/rb72/m9zl/d0FteHh4eEd4f2x1MaAT8Vd/2byulAbHh4e3kHe9cL9qejqQl/9TF4bHh4e3vN5+dJ/vdD37ouHh4f3H3l5cJBHEpPa8PDw8M7zkj/8+cZwHUz0gobtWQseHh5ezMubTOdfH+3v4eHh4QW88khTHD2simVHQ1d4eHh4G3j5QpzEr6tCil49eHh4eCd5ydJcLW5ycK+OKeDh4eGd5OXxaz5o1Xtk1eP4gn8MeHh4eC1e3ryvFpoPHOSVLPjHgIeHhzfm5dvAZLwgeWTV43X5SI2Hh4e3iNdbmicbQz6UkA+w4uHh4d3Fy7eKtfFuHlJEAQceHh7eZl4CS8rKj8V57LsxpcbDw8Pb0CHKY9N8OGDebFscRuDh4eGNY9zkOLuqSRaNTxUHFPDw8PDO8KpRab7oV1tfk8/g4eHh3ctLwohVowb541swU4aHh4e3iHe9oFdb/tUtpxrpRg8ODw8PbzOv2tTvPYjeMT2prTl0hYeHh7eBl5RSburH5U4iCTw8PLzzvPzwmh+XJ+D8EeDh4eHdxevFtXkcPIluF+97eHh4eC1e9erdeDJwkAQfeHh4eCd5C1r1vaHSQcxRnozAw8PD28CbBw35WEAzYogfPR4eHt5JXjV0yLeNXsutOoKAh4eH93xe9RfyCKN3Fzw8PLwn86pxQ7555K2ychiBh4eHt4FXPRb3wt9qTHw0xsXDw8Pb0ACrNrTyMLc8XJXPlOHh4eEt5X3fhYeHh4eHh4eH94DrF7iozkrVrME7AAAAAElFTkSuQmCC">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/mysql/">mysql</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=mysql使用教程&url=https://echohsq.github.io//2018/08/31/mysql/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://echohsq.github.io//2018/08/31/mysql/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://echohsq.github.io//2018/08/31/mysql/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EchoHao&title=mysql使用教程&summary=developer&pics=https://echohsq.github.io/img/favicon.png&url=https://echohsq.github.io/2018/08/31/mysql/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><strong>mysql常用命令大全,基本上查查这里就可以了哦^_^</strong><br><a id="more"></a></p>
+<h1 id="mysql使用教程"><a href="#mysql使用教程" class="headerlink" title="mysql使用教程"></a>mysql使用教程</h1><p>mysql&gt; INSERT INTO user<br>          (host, user, authentication_string,<br>           select_priv, insert_priv, update_priv)<br>           VALUES (‘localhost’, ‘guest’,<br>           PASSWORD(‘guest123’), ‘Y’, ‘Y’, ‘Y’);<br>Query OK, 1 row affected (0.20 sec)<br>select * from emp;  #注释</p>
+<h2 id="—————————"><a href="#—————————" class="headerlink" title="—————————"></a>—————————</h2><h2 id="—-命令行连接MySql———"><a href="#—-命令行连接MySql———" class="headerlink" title="—-命令行连接MySql———"></a>—-命令行连接MySql———</h2><h3 id="启动mysql服务器"><a href="#启动mysql服务器" class="headerlink" title="启动mysql服务器"></a>启动mysql服务器</h3><p>net start mysql</p>
+<h3 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h3><p>net stop mysql  </p>
+<h3 id="进入"><a href="#进入" class="headerlink" title="进入"></a>进入</h3><p>mysql -h 主机地址 -u 用户名 －p 用户密码 </p>
+<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><p>exit</p>
+<h2 id="—————————-1"><a href="#—————————-1" class="headerlink" title="—————————"></a>—————————</h2><h2 id="—-MySql用户管理———"><a href="#—-MySql用户管理———" class="headerlink" title="—-MySql用户管理———"></a>—-MySql用户管理———</h2><h3 id="修改密码-首先在DOS-下进入mysql安装路径的bin目录下，然后键入以下命令"><a href="#修改密码-首先在DOS-下进入mysql安装路径的bin目录下，然后键入以下命令" class="headerlink" title="修改密码:首先在DOS 下进入mysql安装路径的bin目录下，然后键入以下命令:"></a>修改密码:首先在DOS 下进入mysql安装路径的bin目录下，然后键入以下命令:</h3><p>mysqladmin -uroot -p123 password 456;</p>
+<h3 id="增加用户"><a href="#增加用户" class="headerlink" title="增加用户"></a>增加用户</h3><h3 id="格式-grant-权限-on-数据库-to-用户名-登录主机-identified-by-‘密码’"><a href="#格式-grant-权限-on-数据库-to-用户名-登录主机-identified-by-‘密码’" class="headerlink" title="格式:grant 权限 on 数据库.* to 用户名@登录主机 identified by ‘密码’"></a>格式:grant 权限 on 数据库.* to 用户名@登录主机 identified by ‘密码’</h3><p>/<em><br>如，增加一个用户user1密码为password1，让其可以在本机上登录， 并对所有数据库有查询、插入、修改、删除的权限。首先用以root用户连入mysql，然后键入以下命令：<br>grant select,insert,update,delete on </em>.<em> to user1@localhost Identified by “password1”;<br>如果希望该用户能够在任何机器上登陆mysql，则将localhost改为”%”。<br>如果你不想user1有密码，可以再打一个命令将密码去掉。<br>grant select,insert,update,delete on mydb.</em> to user1@localhost identified by “”;<br>*/</p>
+<p>grant all privileges on wpj1105.* to sunxiao@localhost identified by ‘123’;   #all privileges 所有权限</p>
+<h2 id="—————————-2"><a href="#—————————-2" class="headerlink" title="—————————-"></a>—————————-</h2><h2 id="—–MySql数据库操作基础—–"><a href="#—–MySql数据库操作基础—–" class="headerlink" title="—–MySql数据库操作基础—–"></a>—–MySql数据库操作基础—–</h2><h3 id="显示数据库"><a href="#显示数据库" class="headerlink" title="显示数据库"></a>显示数据库</h3><p>show databases;</p>
+<h3 id="判断是否存在数据库wpj1105-有的话先删除"><a href="#判断是否存在数据库wpj1105-有的话先删除" class="headerlink" title="判断是否存在数据库wpj1105,有的话先删除"></a>判断是否存在数据库wpj1105,有的话先删除</h3><p>drop database if exists wpj1105;</p>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><p>create database wpj1105;</p>
+<h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><p>drop database wpj1105;</p>
+<h3 id="使用该数据库"><a href="#使用该数据库" class="headerlink" title="使用该数据库"></a>使用该数据库</h3><p>use wpj1105;</p>
+<h3 id="显示数据库中的表"><a href="#显示数据库中的表" class="headerlink" title="显示数据库中的表"></a>显示数据库中的表</h3><p>show tables;</p>
+<h3 id="先判断表是否存在-存在先删除"><a href="#先判断表是否存在-存在先删除" class="headerlink" title="先判断表是否存在,存在先删除"></a>先判断表是否存在,存在先删除</h3><p>drop table if exists student;</p>
+<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p>create table student(<br>id int auto_increment primary key,<br>name varchar(50),<br>sex varchar(20),<br>date varchar(50),<br>content varchar(100)<br>)default charset=utf8;</p>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>drop table student;</p>
+<h3 id="查看表的结构"><a href="#查看表的结构" class="headerlink" title="查看表的结构"></a>查看表的结构</h3><p>describe student;  #可以简写为desc student;</p>
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><p>insert into student values(null,’aa’,’男’,’1988-10-2’,’……’);</p>
+<h3 id="查询表中的数据"><a href="#查询表中的数据" class="headerlink" title="查询表中的数据"></a>查询表中的数据</h3><p>select * from student;<br>select id,name from student;</p>
+<h3 id="修改某一条数据"><a href="#修改某一条数据" class="headerlink" title="修改某一条数据"></a>修改某一条数据</h3><p>update student set sex=’男’ where id=4;</p>
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>delete from student where id=5;</p>
+<h3 id="and-且"><a href="#and-且" class="headerlink" title="and 且"></a>and 且</h3><p>select * from student where date&gt;’1988-1-2’ and date&lt;’1988-12-1’;</p>
+<h3 id="or-或"><a href="#or-或" class="headerlink" title="or 或"></a>or 或</h3><p>select * from student where date&lt;’1988-11-2’ or date&gt;’1988-12-1’;</p>
+<h3 id="between"><a href="#between" class="headerlink" title="between"></a>between</h3><p>select * from student where date between ‘1988-1-2’ and ‘1988-12-1’;</p>
+<h3 id="in-查询制定集合内的数据"><a href="#in-查询制定集合内的数据" class="headerlink" title="in 查询制定集合内的数据"></a>in 查询制定集合内的数据</h3><p>select * from student where id in (1,3,5);</p>
+<h3 id="排序-asc-升序-desc-降序"><a href="#排序-asc-升序-desc-降序" class="headerlink" title="排序 asc 升序  desc 降序"></a>排序 asc 升序  desc 降序</h3><p>select * from student order by id asc;</p>
+<h3 id="分组查询-聚合函数"><a href="#分组查询-聚合函数" class="headerlink" title="分组查询 #聚合函数"></a>分组查询 #聚合函数</h3><p>select max(id),name,sex from student group by sex;</p>
+<p>select min(date) from student;</p>
+<p>select avg(id) as ‘求平均’ from student;</p>
+<p>select count(*) from student;   #统计表中总数</p>
+<p>select count(sex) from student;   #统计表中性别总数  若有一条数据中sex为空的话,就不予以统计~</p>
+<p>select sum(id) from student;</p>
+<h3 id="查询第i条以后到第j条的数据-不包括第i条"><a href="#查询第i条以后到第j条的数据-不包括第i条" class="headerlink" title="查询第i条以后到第j条的数据(不包括第i条)"></a>查询第i条以后到第j条的数据(不包括第i条)</h3><p>select * from student limit 2,5;  #显示3-5条数据</p>
+<h3 id="巩固练习"><a href="#巩固练习" class="headerlink" title="巩固练习"></a>巩固练习</h3><p>create table c(<br> id int primary key auto_increment,<br> name varchar(10) not null,<br> sex varchar(50) ,  #DEFAULT ‘男’ ,<br> age int unsigned, #不能为负值(如为负值 则默认为0)<br> sno int unique    #不可重复<br>);</p>
+<p>drop table c;<br>desc c;</p>
+<p>insert into c (id,name,sex,age,sno) values (null,’涛哥’,’男’,68,1);<br>insert into c (id,name,sex,age,sno) values (null,’aa’,’男’,68,2);<br>insert into c (id,name,sex,age,sno) values (null,’平平’,’男’,35,3);<br>…</p>
+<p>select * from c;</p>
+<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><p>update c set age=66 where id=2;<br>update c set name=’花花’,age=21,sex=’女’ where id=2<br>delete from c where age=21;</p>
+<h3 id="常用查询语句"><a href="#常用查询语句" class="headerlink" title="常用查询语句"></a>常用查询语句</h3><p>select name,age ,id from c<br>select <em> from c where age&gt;40 and age&lt;60;  #and<br>select </em> from c where age&lt;40 or age&lt;60;  #or<br>select <em> from c where age between 40 and 60 #between<br>select </em> from c where age in (30,48,68,99);     #in 查询指定集合内的数据<br>select * from c order by age desc;      #order by （asc升序 des降序）</p>
+<h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><p>select name,max(age) from c group by sex;  #按性别分组查年龄最大值</p>
+<h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><p>select min(age) from c;<br>select avg(age) as ‘平均年龄 ‘ from c;<br>select count(*) from c;  #统计表中数据总数<br>select sum(age) from c;</p>
+<h3 id="修改表的名字"><a href="#修改表的名字" class="headerlink" title="修改表的名字"></a>修改表的名字</h3><h3 id="格式-alter-table-tbl-name-rename-to-new-name"><a href="#格式-alter-table-tbl-name-rename-to-new-name" class="headerlink" title="格式:alter table tbl_name rename to new_name"></a>格式:alter table tbl_name rename to new_name</h3><p>alter table c rename to a;</p>
+<h3 id="表结构修改"><a href="#表结构修改" class="headerlink" title="表结构修改"></a>表结构修改</h3><p>create table test<br>(<br>id int not null auto_increment primary key, #设定主键<br>name varchar(20) not null default ‘NoName’, #设定默认值<br>department_id int not null,<br>position_id int not null,<br>unique (department_id,position_id) #设定唯一值<br>);</p>
+<h3 id="修改表的名字-1"><a href="#修改表的名字-1" class="headerlink" title="修改表的名字"></a>修改表的名字</h3><h3 id="格式-alter-table-tbl-name-rename-to-new-name-1"><a href="#格式-alter-table-tbl-name-rename-to-new-name-1" class="headerlink" title="格式:alter table tbl_name rename to new_name"></a>格式:alter table tbl_name rename to new_name</h3><p>alter table test rename to test_rename;</p>
+<h3 id="向表中增加一个字段-列"><a href="#向表中增加一个字段-列" class="headerlink" title="向表中增加一个字段(列)"></a>向表中增加一个字段(列)</h3><h3 id="格式-alter-table-tablename-add-columnname-type-alter-table-tablename-add-columnname-type"><a href="#格式-alter-table-tablename-add-columnname-type-alter-table-tablename-add-columnname-type" class="headerlink" title="格式:alter table tablename add columnname type;/alter table tablename add(columnname type);"></a>格式:alter table tablename add columnname type;/alter table tablename add(columnname type);</h3><p>alter table test add  columnname varchar(20);</p>
+<h3 id="修改表中某个字段的名字"><a href="#修改表中某个字段的名字" class="headerlink" title="修改表中某个字段的名字"></a>修改表中某个字段的名字</h3><p>alter table tablename change columnname newcolumnname type;  #修改一个表的字段名<br>alter table test change name uname varchar(50);</p>
+<p>select * from test;</p>
+<h3 id="表position-增加列test"><a href="#表position-增加列test" class="headerlink" title="表position 增加列test"></a>表position 增加列test</h3><p>alter table position add(test char(10));</p>
+<h3 id="表position-修改列test"><a href="#表position-修改列test" class="headerlink" title="表position 修改列test"></a>表position 修改列test</h3><p>alter table position modify test char(20) not null;</p>
+<h3 id="表position-修改列test-默认值"><a href="#表position-修改列test-默认值" class="headerlink" title="表position 修改列test 默认值"></a>表position 修改列test 默认值</h3><p>alter table position alter test set default ‘system’;</p>
+<h3 id="表position-去掉test-默认值"><a href="#表position-去掉test-默认值" class="headerlink" title="表position 去掉test 默认值"></a>表position 去掉test 默认值</h3><p>alter table position alter test drop default;</p>
+<h3 id="表position-去掉列test"><a href="#表position-去掉列test" class="headerlink" title="表position 去掉列test"></a>表position 去掉列test</h3><p>alter table position drop column test;</p>
+<h3 id="表depart-pos-删除主键"><a href="#表depart-pos-删除主键" class="headerlink" title="表depart_pos 删除主键"></a>表depart_pos 删除主键</h3><p>alter table depart_pos drop primary key;</p>
+<h3 id="表depart-pos-增加主键"><a href="#表depart-pos-增加主键" class="headerlink" title="表depart_pos 增加主键"></a>表depart_pos 增加主键</h3><p>alter table depart_pos add primary key PK_depart_pos<br>(department_id,position_id);</p>
+<h3 id="用文本方式将数据装入数据库表中（例如D-mysql-txt）"><a href="#用文本方式将数据装入数据库表中（例如D-mysql-txt）" class="headerlink" title="用文本方式将数据装入数据库表中（例如D:/mysql.txt）"></a>用文本方式将数据装入数据库表中（例如D:/mysql.txt）</h3><p>load data local infile “D:/mysql.txt” into table MYTABLE;</p>
+<h3 id="导入-sql文件命令（例如D-mysql-sql）"><a href="#导入-sql文件命令（例如D-mysql-sql）" class="headerlink" title="导入.sql文件命令（例如D:/mysql.sql）"></a>导入.sql文件命令（例如D:/mysql.sql）</h3><p>source d:/mysql.sql;  #或者  /. d:/mysql.sql;</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread"
+        data-thread-key=""
+        data-url="https://echohsq.github.io/2018/08/31/mysql/"
+        data-title="mysql使用教程">
+    </div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/08/31/javaWeb/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Echo Hao's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        912171657@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:912171657@qq.com" target="_blank" title="Email Me">
+                        <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+            主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+    <!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+    -->
+
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a>
+        </ul>
+    </li>
+
+    <!-- Categories  -->
+    
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+  	
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+  	
+        <li>
+            <a href="/tags" title="tags">
+                
+                    <i class="material-icons sidebar-material-icons">loyalty</i>
+                
+                tags
+            </a>
+        </li>
+  	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+            文章总数
+            <span class="sidebar-badge">15</span>
+        </a>
+    </li>
+</ul>
+
+
+        <!-- Sidebar Divider -->
+        <div class="sidebar-divider"></div>
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        主题 - Material
+        <span class="sidebar-badge badge-circle">i</span>
+    </div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+    sidebar.help
+    <span class="mdl-button__ripple-container">
+      <span class="mdl-ripple"></span>
+    </span>
+  </div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+    </div>
+
+    <!-- Sidebar Sponsor -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/15034015670" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://zhihu.com" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.png);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;EchoHao
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/highlight.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+        var duoshuoQuery = {
+            short_name: 'echohao'
+        };
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = 'https://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共 js 代码 end -->
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
